@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Литература о Фейнмане</title>
+    <link rel="stylesheet" href="styles.css" />
+        <!-- PWA-метатеги -->
+        <link rel="manifest" href="/manifest.json">
+        <meta name="theme-color" content="#0a9396">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <link rel="apple-touch-icon" href="images/icon-192.png">
+    
+        <!-- Подключение Service Worker -->
+        <script>
+          if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+              navigator.serviceWorker.register('/sw.js');
+            });
+          }
+        </script>
+</head>
+<body>
+    <div class="background-overlay"></div>
+
+    <nav class="navbar">
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="fanclub.html">Фан-клуб</a></li>
+                <li><a href="literature.html" class="active">Литература</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="header">
+            <h1>Литература о Ричарде Фейнмане</h1>
+            <p>Книги и статьи о жизни и работе великого физика</p>
+        </div>
+
+        <div class="content-box literature-content">
+
+            <div class="literature-block box">
+                <h2>Ранние годы и биография</h2>
+                <p>В этой категории собраны книги и статьи, описывающие детство и юность Фейнмана, его обучение и первые научные шаги.</p>
+                <ul>
+                    <li>"Вы, конечно, шутите, мистер Фейнман!" — автобиография, полная забавных и вдохновляющих историй.</li>
+                    <li>"Гений: Жизнь и наука Ричарда Фейнмана" — Джеймс Глик, глубокий биографический очерк.</li>
+                </ul>
+            </div>
+
+            <div class="literature-block box">
+                <h2>Научные труды и лекции</h2>
+                <p>Основные работы Фейнмана, в которых изложены его научные идеи и подходы.</p>
+                <ul>
+                    <li>"Фейнмановские лекции по физике" — фундаментальный учебник для студентов и специалистов.</li>
+                    <li>"КЭД — странная теория света и вещества" — популярное введение в квантовую электродинамику.</li>
+                </ul>
+            </div>
+
+            <div class="literature-block box">
+                <h2>Публикации о Фейнмане</h2>
+                <p>Книги и статьи, написанные другими авторами, посвящённые жизни и наследию Фейнмана.</p>
+                <ul>
+                    <li>"Квантовый человек" — Лоуренс Краусс, взгляд на Фейнмана как на уникального учёного и личность.</li>
+                    <li>"Фейнман и физика" — сборник эссе и воспоминаний коллег и учеников.</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>"Наука — это культ сомнения" — Ричард Фейнман</p>
+        <p>© 2025 Сайт о наследии великого физика</p>
+    </footer>
+</body>
+</html>

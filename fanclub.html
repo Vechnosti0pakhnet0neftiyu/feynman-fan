@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Фан-клуб Ричарда Фейнмана</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- PWA-метатеги -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0a9396">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="images/icon-192.png">
+
+    <!-- Подключение Service Worker -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js');
+        });
+      }
+    </script>
+</head>
+<body>
+    <div class="background-overlay"></div>
+
+    <nav class="navbar">
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="fanclub.html" class="active">Фан-клуб</a></li>
+                <li><a href="literature.html">Литература</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="header">
+            <h1>Фан-клуб Ричарда Фейнмана</h1>
+            <p>Присоединяйтесь к сообществу поклонников великого физика</p>
+        </div>
+
+        <div class="row equal-height fanclub-row">
+            <div class="fan-form box">
+                <h2>Вступить в фан-клуб</h2>
+                <form method="post" action="fanclub.php">
+                    <div class="form-group">
+                        <label for="name">Имя</label>
+                        <input type="text" id="name" name="name" placeholder="Ваше имя" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Электронная почта</label>
+                        <input type="email" id="email" name="email" placeholder="Ваш email" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="interest">Сфера деятельности</label>
+                        <input type="text" id="interest" name="interest" placeholder="Например: студент, преподаватель, исследователь" required />
+                    </div>
+                    <button type="submit" class="submit-btn">Присоединиться</button>
+                </form>
+            </div>
+
+            <div class="fan-photo box">
+                <img src="images/feynman-fan.jpg" alt="Ричард Фейнман" />
+                <div class="photo-caption">Ричард Фейнман</div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>"Наука — это культ сомнения" — Ричард Фейнман</p>
+        <p>© 2025 Сайт о наследии великого физика</p>
+    </footer>
+</body>
+</html>
+
