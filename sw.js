@@ -5,11 +5,11 @@ const urlsToCache = [
   '/fanclub.html',
   '/literature.html',
   '/styles.css',
-  '/images/feynman.jpg',
-  '/images/feynman-fan.jpg',
-  '/images/bg.jpg',
-  '/images/icon-192.png',
-  '/images/icon-512.png'
+  '/feynman.jpg',
+  '/feynman-fan.jpg',
+  '/bg.jpg',
+  '/icon-192.png',
+  '/icon-512.png'
 ];
 
 self.addEventListener('install', (event) => {
